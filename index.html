@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mro NLCA</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="text-black">
+      <!-- Title Section Start -->
+      <div
+        class="container mx-auto flex flex-wrap justify-between items-center p-4"
+      >
+        <!-- Left Section -->
+        <div class="flex items-center space-x-4 mb-2 sm:mb-0">
+          <span class="flex items-center">
+            <a
+              href="tel:+959 459 333 730"
+              class="hover:underline text-sm flex items-center"
+            >
+              <i class="fa-solid fa-phone mr-2"></i> +959 459 333 730
+            </a>
+          </span>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="hover:underline text-sm flex items-center"
+          >
+            <i class="fab fa-facebook-square text-blue-800 mr-2"></i> Mro NLCA
+          </a>
+        </div>
+
+        <!-- Right Section -->
+        <div class="flex items-center space-x-4">
+          <button class="cursor-pointer text-sm flex items-center">
+            <i class="fa-brands fa-gg mr-2"></i> Support
+          </button>
+          <button class="cursor-pointer text-sm flex items-center">
+            <i class="fa-regular fa-bell mr-2"></i> Subscribe
+          </button>
+        </div>
+      </div>
+      <!-- Title Section End -->
+
+      <!-- Navbar Start -->
+      <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+              <a href="#" class="flex-shrink-0">
+                <span class="text-white font-serif text-xl font-bold"
+                  >MRO NLCA</span
+                >
+              </a>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a
+                  href="#"
+                  class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                  >Home</a
+                >
+                <div class="relative group">
+                  <button
+                    class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    About
+                    <svg
+                      class="ml-1 h-4 w-4 inline-block"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-gray-700 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out"
+                  >
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-white hover:bg-gray-600"
+                      >Our Mission</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-white hover:bg-gray-600"
+                      >History</a
+                    >
+                    <a
+                      href="#"
+                      class="block px-4 py-2 text-sm text-white hover:bg-gray-600"
+                      >Our Team</a
+                    >
+                  </div>
+                </div>
+                <a
+                  href="#"
+                  class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                  >Events</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                  >Publications</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                  >Membership</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                  >Contact</a
+                >
+              </div>
+            </div>
+            <div class="md:hidden">
+              <button
+                type="button"
+                class="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+                aria-label="Toggle menu"
+              >
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, toggle classes based on menu state. -->
+        <div class="md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a
+              href="#"
+              class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+              >Home</a
+            >
+            <div x-data="{ open: false }">
+              <button
+                @click="open = !open"
+                class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex justify-between items-center"
+              >
+                About
+                <svg
+                  class="h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div class="pl-4 hidden">
+                <a
+                  href="#"
+                  class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                  >Our Mission</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                  >History</a
+                >
+                <a
+                  href="#"
+                  class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+                  >Our Team</a
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+              >Events</a
+            >
+            <a
+              href="#"
+              class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+              >Publications</a
+            >
+            <a
+              href="#"
+              class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+              >Membership</a
+            >
+            <a
+              href="#"
+              class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Banner Start -->
+      <div class="relative h-[100vh] w-full">
+        <!-- Background image with overlay -->
+        <div
+          class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style="background-image: url('./img/img-1.jpg')"
+        >
+          <!-- Dark overlay for better text readability -->
+          <div class="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 h-full"
+        >
+          <div
+            class="flex flex-col justify-center items-center h-full text-center"
+          >
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-50 mb-6 tracking-wide"
+            >
+              MRO National Literature and Cultural Association
+            </h1>
+            <p
+              class="text-xl sm:text-2xl text-gray-200 mb-12 max-w-3xl font-light"
+            >
+              Preserving and Promoting Our Heritage
+            </p>
+            <div
+              class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 w-full sm:w-auto"
+            >
+              <button
+                class="bg-white/90 hover:bg-white text-gray-900 font-medium px-4 sm:px-8 py-2 sm:py-3 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-sm sm:text-base w-[200px] sm:w-auto mx-auto"
+              >
+                Support Our Association
+              </button>
+              <button
+                class="border-2 border-white/80 text-white hover:bg-white hover:text-gray-900 font-medium px-4 sm:px-8 py-2 sm:py-3 rounded-md transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 text-sm sm:text-base w-[200px] sm:w-auto mx-auto"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Banner End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content Start -->
+    <main class="bg-gray-50">
+      <!-- Mission Section -->
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Our Mission & Vision
+            </h2>
+            <p class="text-gray-600 text-lg">
+              Dedicated to preserving, promoting, and revitalizing Mro cultural
+              heritage through literature, arts, and community engagement.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div class="text-gray-800 mb-4">
+                <i class="fas fa-book text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Preserve Heritage</h3>
+              <p class="text-gray-600">
+                Documenting and archiving Mro literature, traditions, and
+                cultural practices for future generations.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div class="text-gray-800 mb-4">
+                <i class="fas fa-users text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Build Community</h3>
+              <p class="text-gray-600">
+                Creating spaces for cultural exchange and strengthening bonds
+                within the Mro community.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div class="text-gray-800 mb-4">
+                <i class="fas fa-graduation-cap text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Educate & Share</h3>
+              <p class="text-gray-600">
+                Promoting Mro language, literature, and cultural education
+                across generations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Programs Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+            Our Programs & Initiatives
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="relative overflow-hidden rounded-xl group">
+              <img
+                src="./img/img-3.jpg"
+                alt="Cultural Festival"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end"
+              >
+                <h3 class="text-white text-xl font-bold mb-2">
+                  Annual Cultural Festival
+                </h3>
+                <p class="text-gray-200">
+                  Celebrating Mro traditions through performances, exhibitions,
+                  and community gatherings.
+                </p>
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-xl group">
+              <img
+                src="./img/img-2.jpg"
+                alt="Language Workshop"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-6 flex flex-col justify-end"
+              >
+                <h3 class="text-white text-xl font-bold mb-2">
+                  Language Preservation
+                </h3>
+                <p class="text-gray-200">
+                  Regular workshops and classes to teach and preserve the Mro
+                  language.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact Stats Section -->
+      <section class="py-16 bg-gray-700 text-white">
+        <div class="container mx-auto px-4">
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-6xl mx-auto"
+          >
+            <div>
+              <div class="text-4xl font-bold mb-2">2,500+</div>
+              <p class="text-blue-200">Community Members</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold mb-2">50+</div>
+              <p class="text-blue-200">Cultural Events</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold mb-2">1,000+</div>
+              <p class="text-blue-200">Students Reached</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold mb-2">10+</div>
+              <p class="text-blue-200">Partner Organizations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest News Section -->
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+            Latest News & Updates
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <img
+                src="./img/photo-1.jpg"
+                alt="News 1"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">December 15, 2024</div>
+                <h3 class="text-xl font-semibold mb-2">
+                  Annual Cultural Festival 2024
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Join us for our biggest cultural celebration featuring
+                  traditional performances...
+                </p>
+                <a
+                  href="#"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  >Read More →</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <img
+                src="./img/photo-2.jpg"
+                alt="News 2"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">December 10, 2024</div>
+                <h3 class="text-xl font-semibold mb-2">
+                  Language Workshop Series
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  New series of language workshops starting this month for all
+                  age groups...
+                </p>
+                <a
+                  href="#"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  >Read More →</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <img
+                src="/img/photo-3.jpg"
+                alt="News 3"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <div class="text-sm text-gray-500 mb-2">December 5, 2024</div>
+                <h3 class="text-xl font-semibold mb-2">
+                  Youth Leadership Program
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Empowering the next generation of cultural leaders through our
+                  mentorship...
+                </p>
+                <a
+                  href="#"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  >Read More →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Get Involved Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div
+            class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden"
+          >
+            <div class="md:flex">
+              <div class="md:w-1/2 p-12">
+                <h2 class="text-3xl font-bold mb-4">Get Involved</h2>
+                <p class="text-gray-600 mb-6">
+                  Join our community and help preserve Mro cultural heritage for
+                  future generations.
+                </p>
+                <div class="space-y-4">
+                  <a
+                    href="#"
+                    class="block bg-blue-800 text-white text-center py-3 px-6 rounded-lg hover:bg-blue-900 transition-colors"
+                    >Become a Member</a
+                  >
+                  <a
+                    href="#"
+                    class="block border-2 border-blue-600 text-blue-800 text-center py-3 px-6 rounded-lg hover:bg-blue-50 transition-colors"
+                    >Volunteer With Us</a
+                  >
+                </div>
+              </div>
+              <div class="md:w-1/2 bg-gray-800 p-12 text-white">
+                <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+                <form class="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    class="w-full px-4 py-2 rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    class="w-full px-4 py-2 rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                  />
+                  <textarea
+                    placeholder="Your Message"
+                    rows="4"
+                    class="w-full px-4 py-2 rounded-lg bg-gray-700 border-gray-600 text-white placeholder-gray-400"
+                  ></textarea>
+                  <button
+                    class="w-full bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-gray-800 text-white mt-12">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- About Section -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">About Us</h3>
+            <p class="text-gray-300 text-sm">
+              The Mro National Literature and Culture Association is dedicated
+              to preserving and promoting the rich heritage of the Mro people.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#" class="hover:text-gray-300">Home</a></li>
+              <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+              <li><a href="#" class="hover:text-gray-300">Our Programs</a></li>
+              <li><a href="#" class="hover:text-gray-300">Resources</a></li>
+              <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <p class="mb-2 text-sm">123 Mro Culture Street</p>
+            <p class="mb-2 text-sm">Rakhine, Diasy Villages</p>
+            <p class="mb-2 text-sm">Rakhine</p>
+            <p class="mb-2 text-sm">Email: info@mroculture.org</p>
+            <p class="text-sm">Phone: +959 459 333 730</p>
+          </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="mt-8 pt-8 border-t border-gray-700">
+          <h3 class="text-lg font-semibold mb-4 text-center">Follow Us</h3>
+          <div class="flex justify-center space-x-4">
+            <!-- Icons -->
+            <a href="#" class="hover:text-gray-300" aria-label="Facebook"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a href="#" class="hover:text-gray-300" aria-label="Twitter">
+              <i class="fab fa-twitter-square"></i>
+            </a>
+            <a href="#" class="hover:text-gray-300" aria-label="Instagram">
+              <i class="fab fa-instagram-square"></i>
+            </a>
+            <a href="#" class="hover:text-gray-300" aria-label="YouTube">
+              <i class="fab fa-youtube-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 text-center text-sm text-gray-400">
+          &copy; 2024 Mro National Literature and Culture Association. All
+          rights reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+  </body>
+</html>
