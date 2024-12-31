@@ -6,16 +6,18 @@ const mobileAboutMenu = document.getElementById("mobileAboutMenu");
 // Toggle mobile menu
 menuButton.addEventListener("click", () => {
   const menuIcon = menuButton.querySelector("i");
-  if (mobileMenu.classList.contains("-translate-y-full")) {
+  if (mobileMenu.classList.contains("open")) {
     menuIcon.classList.remove("fa-xmark");
     menuIcon.classList.add("fa-bars");
-    mobileMenu.classList.remove("-translate-y-full", "opacity-0");
-    mobileMenu.classList.add("translate-y-0", "opacity-100");
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("open");
+    mobileMenu.classList.remove("translate-y-full");
   } else {
     menuIcon.classList.remove("fa-bars");
     menuIcon.classList.add("fa-xmark");
-    mobileMenu.classList.remove("translate-y-0", "opacity-100");
-    mobileMenu.classList.add("-translate-y-full", "opacity-0");
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("open");
+    mobileMenu.classList.add("translate-y-full");
   }
 });
 
