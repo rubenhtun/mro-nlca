@@ -4,21 +4,21 @@ const banners = [
     heading: "MRO National Literature and Culture Association",
     description: "Preserving and Promoting Our Heritage",
     mission:
-      "Our mission is to celebrate, protect, and enhance the cultural richness and literary traditions of our nation. Through community initiatives, educational programs, and cultural events, we aim to inspire the preservation and continuation of our unique heritage.",
+      "ကျွန်ုပ်တို့လူမျိုး၏ ယဉ်ကျေးမှုနှင့် စာပေအမွေအနှစ်များကို ထိန်းသိမ်းမြှင့်တင်ရန် ရည်ရွယ်ပါသည်။ ရပ်ရွာလူထုပူးပေါင်းပါဝင်သော လုပ်ငန်းစဉ်များမှတစ်ဆင့် ယဉ်ကျေးမှုအမွေအနှစ်များ ရှင်သန်ထွန်းကားစေရန် ဆောင်ရွက်သွားမည် ဖြစ်ပါသည်။",
   },
   {
     image: "./img/memo-2.jpg",
     heading: "Celebrating Our Unique Traditions",
     description: "Join us in exploring cultural richness.",
     mission:
-      "We are working together to protect our literary history through initiatives and education.",
+      "ကျွန်ုပ်တို့သည် အတူတကွ ကျွန်ုပ်တို့၏ စာပေသမိုင်းကို အစီအမံများနှင့် ပညာရေးမှတစ်ဆင့် ကာကွယ်ပေးရန် အလုပ်လုပ်နေပါသည်။",
   },
   {
     image: "./img/memo-3.jpg",
     heading: "Promoting Education and Literature",
     description: "Inspiring generations through knowledge.",
     mission:
-      "Through programs and events, we foster the preservation and expansion of our cultural legacy.",
+      "အစီအစဉ်များနှင့် အခမ်းအနားများမှတစ်ဆင့် ကျွန်ုပ်တို့သည် ကျွန်ုပ်တို့၏ယဉ်ကျေးမှုကို ကာကွယ်ပြီး တိုးတက်စေရန်မြှင့်တင်ပါမည်။",
   },
 ];
 
