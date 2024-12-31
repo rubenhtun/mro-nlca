@@ -1,22 +1,19 @@
-// Mobile menu toggle
 const menuButton = document.getElementById("menuButton");
-menuCloseButton = document.getElementById("menuCloseButton");
 const mobileMenu = document.getElementById("mobileMenu");
-const mobileAboutButton = document.getElementById("mobileAboutButton");
-const mobileAboutMenu = document.getElementById("mobileAboutMenu");
-const aboutArrow = mobileAboutButton.querySelector("svg");
+const menuIcon = document.getElementById("menuIcon");
 
 menuButton.addEventListener("click", () => {
-  mobileMenu.classList.remove("translate-x-full");
-  mobileMenu.classList.add("translate-x-0");
-});
+  const isMenuOpen = mobileMenu.classList.contains("hidden");
 
-menuCloseButton.addEventListener("click", () => {
-  mobileMenu.classList.remove("translate-x-0");
-  mobileMenu.classList.add("translate-x-full");
-});
-
-mobileAboutButton.addEventListener("click", () => {
-  mobileAboutMenu.classList.toggle("hidden");
-  aboutArrow.classList.toggle("rotate-180");
+  if (isMenuOpen) {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("block");
+    menuIcon.classList.remove("fa-bars");
+    menuIcon.classList.add("fa-xmark");
+  } else {
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("block");
+    menuIcon.classList.remove("fa-xmark");
+    menuIcon.classList.add("fa-bars");
+  }
 });
