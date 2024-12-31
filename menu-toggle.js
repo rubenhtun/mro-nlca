@@ -21,7 +21,13 @@ menuButton.addEventListener("click", () => {
 
 // Toggle About submenu
 mobileAboutButton.addEventListener("click", function () {
-  mobileAboutMenu.classList.toggle("open");
+  if (mobileAboutMenu.classList.contains("open")) {
+    mobileAboutMenu.classList.remove("open");
+    mobileAboutMenu.classList.add("hidden");
+  } else {
+    mobileAboutMenu.classList.remove("hidden");
+    mobileAboutMenu.classList.add("open");
+  }
   const icon = mobileAboutButton.querySelector("svg");
   icon.style.transform = mobileAboutMenu.classList.contains("open")
     ? "rotate(180deg)"
