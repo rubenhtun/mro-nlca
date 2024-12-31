@@ -1,20 +1,20 @@
 const banners = [
   {
-    image: "./img/img-1.jpg",
+    image: "./img/memo-1.jpg",
     heading: "MRO National Literature and Culture Association",
     description: "Preserving and Promoting Our Heritage",
     mission:
       "Our mission is to celebrate, protect, and enhance the cultural richness and literary traditions of our nation. Through community initiatives, educational programs, and cultural events, we aim to inspire the preservation and continuation of our unique heritage.",
   },
   {
-    image: "./img/img-2.jpg",
+    image: "./img/memo-2.jpg",
     heading: "Celebrating Our Unique Traditions",
     description: "Join us in exploring cultural richness.",
     mission:
       "We are working together to protect our literary history through initiatives and education.",
   },
   {
-    image: "./img/img-3.jpg",
+    image: "./img/memo-3.jpg",
     heading: "Promoting Education and Literature",
     description: "Inspiring generations through knowledge.",
     mission:
