@@ -11,13 +11,11 @@ menuButton.addEventListener("click", () => {
     menuIcon.classList.add("fa-bars");
     mobileMenu.classList.add("hidden");
     mobileMenu.classList.remove("open");
-    mobileMenu.classList.remove("translate-y-full");
   } else {
     menuIcon.classList.remove("fa-bars");
     menuIcon.classList.add("fa-xmark");
     mobileMenu.classList.remove("hidden");
     mobileMenu.classList.add("open");
-    mobileMenu.classList.add("translate-y-full");
   }
 });
 
