@@ -1,7 +1,7 @@
 const menuButton = document.getElementById("menuButton");
 const mobileMenu = document.getElementById("mobileMenu");
-const mobileAboutButton = document.getElementById("mobileAboutButton");
-const mobileAboutMenu = document.getElementById("mobileAboutMenu");
+const mobileSubMenuButton = document.querySelectorAll("#mobileSubMenuButton");
+const mobileSubMenu = document.getElementById("mobileSubMenu");
 
 // Toggle mobile menu
 menuButton.addEventListener("click", () => {
@@ -20,16 +20,16 @@ menuButton.addEventListener("click", () => {
 });
 
 // Toggle About submenu
-mobileAboutButton.addEventListener("click", function () {
-  if (mobileAboutMenu.classList.contains("open")) {
-    mobileAboutMenu.classList.remove("open");
-    mobileAboutMenu.classList.add("hidden");
+mobileSubMenuButton.addEventListener("click", function () {
+  if (mobileSubMenu.classList.contains("open")) {
+    mobileSubMenu.classList.remove("open");
+    mobileSubMenu.classList.add("hidden");
   } else {
-    mobileAboutMenu.classList.remove("hidden");
-    mobileAboutMenu.classList.add("open");
+    mobileSubMenu.classList.remove("hidden");
+    mobileSubMenu.classList.add("open");
   }
-  const icon = mobileAboutButton.querySelector("fa-angle-down");
-  icon.style.transform = mobileAboutMenu.classList.contains("open")
+  const icon = mobileSubMenuButton.querySelector("fa-angle-down");
+  icon.style.transform = mobileSubMenu.classList.contains("open")
     ? "rotate(180deg)"
     : "rotate(0deg)";
 });
