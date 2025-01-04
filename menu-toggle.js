@@ -28,7 +28,7 @@ mobileAboutButton.addEventListener("click", function () {
     mobileAboutMenu.classList.remove("hidden");
     mobileAboutMenu.classList.add("open");
   }
-  const icon = mobileAboutButton.querySelector("svg");
+  const icon = mobileAboutButton.querySelector("fa-angle-down");
   icon.style.transform = mobileAboutMenu.classList.contains("open")
     ? "rotate(180deg)"
     : "rotate(0deg)";
