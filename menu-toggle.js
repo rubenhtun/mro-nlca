@@ -1,7 +1,7 @@
 const menuButton = document.getElementById("menuButton");
 const mobileMenu = document.getElementById("mobileMenu");
 const mobileSubMenuButton = document.querySelectorAll("#mobileSubMenuButton");
-const mobileSubMenu = document.getElementById("mobileSubMenu");
+const mobileSubMenu = document.querySelectorAll("#mobileSubMenu");
 
 // Toggle mobile menu
 menuButton.addEventListener("click", () => {
@@ -19,7 +19,7 @@ menuButton.addEventListener("click", () => {
   }
 });
 
-// Toggle About submenu
+// Toggle submenu
 mobileSubMenuButton.addEventListener("click", function () {
   if (mobileSubMenu.classList.contains("open")) {
     mobileSubMenu.classList.remove("open");
